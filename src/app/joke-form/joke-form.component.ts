@@ -5,7 +5,8 @@ import { Joke } from '../joke';
   selector: 'app-joke-form',
   templateUrl: './joke-form.component.html',
   styleUrls: ['./joke-form.component.css'],
-    // encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None // This function make all of class card change
+  encapsulation: ViewEncapsulation.ShadowDom // This method make this component denied global styles from bootstrap
 })
 export class JokeFormComponent implements OnInit {
 
