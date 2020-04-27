@@ -1,0 +1,15 @@
+<div class="container col-md-4 mb-4 mt-4">
+<div class="card p-3">
+    <h4 class="card-body ">
+        {{data.setup}}
+    </h4>
+    <p class="card-text"
+       [hidden]="data.hide">{{data.punchline}}</p>
+    <a (click)="data.toggle()"
+       class="btn btn-warning text-white mb-2 mt-2">Tell Me
+    </a>
+    <a (click)="deleteItem()"
+       class="btn btn-danger text-white mt-2 mb-2">Delete
+    </a>
+</div>
+</div>
