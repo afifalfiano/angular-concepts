@@ -1,11 +1,11 @@
-<!-- <h1>ngFor</h1>
-<ul>
-    <li *ngFor="let person of people; let i = index;">
-        {{i+1}} - {{person.name}}
+<h1>ngFor</h1>
+<ul *ngFor="let person of people; let i = index;" >
+    <li *ngIf="person.age < 20">
+        {{i+1}} - {{person.name}} - ({{person.age}})
     </li>
-</ul> -->
+</ul>
 
-<h1>ngFor (grouped)</h1>
+<!-- <h1>ngFor (grouped)</h1>
 <ul>
     <li *ngFor="let group of countryGroup; let i = index;">
         {{group.country}}
@@ -15,4 +15,4 @@
             </li>
         </ul>
     </li>
-</ul>
+</ul> -->

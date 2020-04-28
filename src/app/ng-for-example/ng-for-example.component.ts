@@ -9,19 +9,24 @@ export class NgForExampleComponent implements OnInit {
 
   people: any[] = [
     {
-      name : 'Afif'
+      name : 'Afif',
+      age: 20
     },
     {
-      name : 'Alfiano'
+      name : 'Alfiano',
+      age: 21
     },
     {
-      name : 'Rafi'
+      name : 'Rafi',
+      age: 15
     },
     {
-      name : 'Paijo'
+      name : 'Paijo',
+      age: 30
     },
     {
-      name : 'Budi'
+      name : 'Budi',
+      age: 25
     },
   ];
 

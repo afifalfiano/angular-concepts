@@ -1,0 +1,14 @@
+<h1>NgSwitchExample</h1>
+<ul *ngFor="let person of people;" [ngSwitch]="person.country">
+    <li *ngSwitchCase="'US'" class="text-success">
+        {{person.name}} - ({{person.country}})
+    </li>
+    <li *ngSwitchCase="'UK'" class="text-danger">
+        {{person.name}} - ({{person.country}})
+    </li>
+    <li *ngSwitchCase="'ID'" class="text-primary">
+        {{person.name}} - ({{person.country}})
+    <li *ngSwitchDefault>
+        {{person.name}} - ({{person.country}})
+    </li>
+</ul>
