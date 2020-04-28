@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BuiltinDirective"
+    }
+  },
+  "defaultProject": "BuiltinDirective",
+  "cli": {
+    "analytics": false
+  }
 }
