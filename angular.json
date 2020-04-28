@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "carousel-image"
+    }
+  },
+  "defaultProject": "carousel-image",
+  "cli": {
+    "analytics": false
+  }
 }
