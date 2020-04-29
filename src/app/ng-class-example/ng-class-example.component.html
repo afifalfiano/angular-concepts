@@ -1,0 +1,27 @@
+<h1>NgClassExample</h1>
+<ul>
+    <!-- <li *ngFor="let person of people"
+    [ngClass]="{'text-success': true}"
+    > -->
+    <!-- <li *ngFor="let person of people"
+    [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-danger': person.country === 'ID',
+        'text-warning': person.country === 'SG'
+    }"
+    > -->
+    <!-- <li *ngFor="let person of people"
+    [class]="'text-success'"
+    > -->
+    <!-- <li *ngFor="let person of people"
+    [class.text-danger]="'true'"
+    > -->
+    <li *ngFor="let person of people"
+    [class.text-danger]="person.country === 'UK'"
+    [class.text-warning]="person.country === 'ID'"
+    [class.text-success]="person.country === 'SG'"
+    
+    >
+        {{person.name}} - ({{person.country}})
+    </li>
+</ul>

@@ -1,0 +1,11 @@
+<h1>NgStyleExample</h1>
+<ul>
+    <!-- <li *ngFor="let person of people" [ngStyle]="{'background-color': person.country === 'ID' ? 'green': 'red'}"> -->
+        <!-- <li *ngFor="let person of people" [ngStyle]="{'background-color': getColor(person.country)}"> -->
+    <li *ngFor="let person of people" 
+    [style.color]="getColor(person.country)"
+    [style.fontSize.px]="24"
+    >
+        {{person.name}} - ({{person.country}})
+    </li>
+</ul>
