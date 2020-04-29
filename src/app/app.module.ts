@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { JokeComponent } from './joke/joke.component';
 import { JokeFormComponent } from './joke-form/joke-form.component';
 import { JokeListComponent } from './joke-list/joke-list.component';
+import { CcCardHoverDirective } from './cc-card-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     JokeComponent,
     JokeFormComponent,
-    JokeListComponent
+    JokeListComponent,
+    CcCardHoverDirective
   ],
   imports: [
     BrowserModule,
