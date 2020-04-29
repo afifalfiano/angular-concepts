@@ -9,7 +9,7 @@
     </ng-template>
     
     <p class="card-text"
-       [hidden]="data.hide">
+       [style.display]="'none'">
        <!-- {{data.punchline}} -->
        <ng-content select=".punchline"></ng-content>
       </p>
