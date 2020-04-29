@@ -104,6 +104,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CustomDirective"
+    }
+  },
+  "defaultProject": "CustomDirective",
+  "cli": {
+    "analytics": false
+  }
 }
