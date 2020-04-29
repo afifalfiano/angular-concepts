@@ -4,6 +4,10 @@
         <!-- {{data.setup}} -->
         <ng-content select=".setup"></ng-content>
     </h4>
+    <ng-template [ngIf]="!data.hide">
+       <p class="card-text">{{data.punchline}}</p>
+    </ng-template>
+    
     <p class="card-text"
        [hidden]="data.hide">
        <!-- {{data.punchline}} -->
