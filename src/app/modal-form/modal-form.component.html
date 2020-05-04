@@ -2,55 +2,58 @@
     <div class="row">
         <div class="col-md-6">
             <h1>Forms</h1>
-    <form [formGroup]="myform">
+    <form [formGroup]="myform" (ngSubmit)="onSubmitEnter()">
         <!-- <pre>{{myform.value | json}}</pre> -->
     <fieldset formGroupName="name" >
-      <div class="form-group" [ngClass]="{
+      <!-- <div class="form-group" [ngClass]="{
         'has-danger': myform.controls.name.controls.firstName.invalid && myform.controls.name.controls.firstName.dirty,
         'has-success': myform.controls.name.controls.firstName.valid && myform.controls.name.controls.firstName.dirty
-      }">
+      }"> -->
+       <div class="form-group">
         <label>First Name</label>
         <input type="text"
                class="form-control"
                formControlName="firstName"
                required>
-        <div class="form-control-feedback"
+        <!-- <div class="form-control-feedback"
                *ngIf="myform.controls.name.controls.firstName.errors && (myform.controls.name.controls.firstName.dirty || myform.controls.name.controls.firstName.touched)">
             <p *ngIf="myform.controls.name.controls.firstName.errors.required">First Name is required</p>
-          </div>
+          </div> -->
       </div>
      
   
-      <div class="form-group" [ngClass]="{
+      <!-- <div class="form-group" [ngClass]="{
         'has-danger': myform.controls.name.controls.lastName.invalid && myform.controls.name.controls.lastName.dirty,
         'has-success': myform.controls.name.controls.lastName.valid && myform.controls.name.controls.lastName.dirty
-      }">
+      }"> -->
+        <div class="form-group">
         <label>Last Name</label>
         <input type="text"
                class="form-control"
                formControlName="lastName"
                required>
-        <div class="form-control-feedback"
+        <!-- <div class="form-control-feedback"
                *ngIf="myform.controls.name.controls.lastName.errors && (myform.controls.name.controls.lastName.dirty || myform.controls.name.controls.lastName.touched)">
             <p *ngIf="myform.controls.name.controls.lastName.errors.required">Last Name is required</p>
-          </div>
+          </div> -->
       </div>
     </fieldset>
   
-    <div class="form-group" [ngClass]="{
+    <!-- <div class="form-group" [ngClass]="{
         'has-success': myform.controls.email.valid && (myform.controls.email.dirty || myform.controls.email.touched),
         'has-danger': myform.controls.email.invalid && (myform.controls.email.pristine || myform.controls.email.untouched)
-    }">
+    }"> -->
+      <div class="form-group">
       <label>Email</label>
       <input type="email"
              class="form-control "
              formControlName="email"
              required>
-     <div class="form-control-feedback"
+     <!-- <div class="form-control-feedback"
              *ngIf="myform.controls.email.errors && (myform.controls.email.dirty || myform.controls.email.touched)">
           <p *ngIf="myform.controls.email.errors.required">Email is required</p>
           <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
-        </div>
+        </div> -->
       <pre>Dirty? {{myform.controls.email.dirty}}</pre>
       <pre>Pristine? {{myform.controls.email.pristine}}</pre>
       <pre>Touched? {{myform.controls.email.touched}}</pre>
@@ -60,26 +63,28 @@
 
     </div>
   
-    <div class="form-group" [ngClass]="{
+    <!-- <div class="form-group" [ngClass]="{
         'has-danger': myform.controls.password.invalid && (myform.controls.password.dirty || myform.controls.password.touched),
         'has-success': myform.controls.password.valid && (myform.controls.password.dirty || myform.controls.password.touched)
-   }">
+   }"> -->
+      <div class="form-group">
       <label>Password</label>
       <input type="password"
              class="form-control"
              formControlName="password"
              required>
-     <div class="form-control-feedback"
+     <!-- <div class="form-control-feedback"
              *ngIf="myform.controls.password.errors && (myform.controls.password.dirty || myform.controls.password.touched)">
           <p *ngIf="myform.controls.password.errors.required">Password is required</p>
           <p *ngIf="myform.controls.password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
-        </div>
-    </div>
+        </div> -->
+    </div> 
   
-    <div class="form-group" [ngClass]="{
+    <!-- <div class="form-group" [ngClass]="{
         'has-danger': myform.controls.language.invalid && (myform.controls.language.dirty || myform.controls.language.touched),
         'has-success': myform.controls.language.valid && (myform.controls.language.dirty || myform.controls.language.touched)
-      }">
+      }"> -->
+      <div class="form-group">
       <label>Language</label>
       <select class="form-control" formControlName="language">
         <option value="">Please select a language</option>
@@ -91,8 +96,8 @@
           </select>
       </select>
     </div>
-    <pre>{{myform.value | json}}</pre>
-
+    <!-- <pre>{{myform.value | json}}</pre> -->
+    <button type="submit" class="btn btn-primary" >Submit</button>
   </form>
 </div>
 </div>

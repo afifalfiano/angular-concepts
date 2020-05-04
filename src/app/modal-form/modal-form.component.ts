@@ -57,4 +57,12 @@ createForm(){
     language: this.language
   });
 }
+
+
+onSubmitEnter(){
+  if(this.myform.valid) {
+    console.log('Form Submitted!');
+    this.myform.reset();
+  }
+}
 }
